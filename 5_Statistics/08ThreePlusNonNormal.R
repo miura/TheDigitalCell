@@ -11,6 +11,6 @@ data7 <- data.frame(
     5.7, 9.3, 6.3),
   treatment = factor(rep(c("vehicle", "cpd1", "cpd2"), 10)))
 kruskal.test(response ~ treatment, data7)
-# load dunn.test, use install.packages if not installed
+# dunn.testを読み込む。インストールされていない場合はinstall.packagesを利用する。
 library(dunn.test)
 dunn.test(data7$response,data7$treatment)

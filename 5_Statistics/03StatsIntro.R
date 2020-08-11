@@ -1,7 +1,7 @@
-# 100 random values taken from the normal distribution (mean = 0, standard deviation = 1)
+# 正規分布から抽出した100個のランダムな値（平均0、分散1）
 set.seed(1)
 data0 <- rnorm(100)
-# shows us the values in the vector, plotted as points
+# ベクトルとして数値を表示し、点をプロット
 plot(data0,t="p")
 hist(data0)
 qqnorm(data0, xlim = c(-3,3), ylim = c(-3,3), main = "Normal Q-Q Plot",
