@@ -1,8 +1,12 @@
-# The Digital Cell
+# デジタル細胞生物学
 
-Code associated with The Digital Cell book.
+## データベース化、ImageJ、R、コマンドライン、Git
 
+本で扱っているコンピュータプログラム、サンプル画像のリポジトリ
+
+<!--
 [![DOI](https://zenodo.org/badge/180952157.svg)](https://zenodo.org/badge/latestdoi/180952157)
+-->
 
 In each of the folders in this repo, you will find code examples that are featured in the corresponding book chapter.
 The code examples are organized in numerical order that they are encountered in the book.
