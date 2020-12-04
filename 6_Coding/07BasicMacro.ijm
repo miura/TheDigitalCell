@@ -1,23 +1,23 @@
 /*
-* Comments here are useful to describe the macro
-* This macro will measure the mean of each image in a folder
+* この位置に書くコメントはマクロ自体の説明に有用である
+* このマクロはフォルダ内のそれぞれの画像について平均値を測定する
 */
-// Prompt user to select the folder with images
+// ユーザーに画像の入っているフォルダの選択を促す
 dir = getDirectory("Select the source directory");
-// Make a list of all files in this directory
+// このディレクトリに含まれる全ファイルのリストを作成する
 list = getFileList(dir);
-// Sort the file list alphabetically
+// 作成したファイルのリストをアルファベット順に並べる
 Array.sort(list);
-// Use batch mode: speeds up execution.
+// バッチモードの利用により実行スピードを速める。
 setBatchMode(true);
-// Define measurements we want
+// 測定したい値を定義する
 run("Set Measurements...", "display area mean redirect=None decimal=3");
-// use a loop to run command(s) on each image
+// それぞれの画像でコマンドを実行するためループを用いる
 for(i=0; i<list.length; i++){
-	// define the ith file in the list and open it
+	// 作成したリスト内のi番目のファイルを定義し、開く
 	filename = dir + list[i];
 	open(filename);
-	// run these commands on each image
+	// それぞれの画像に対してこれらのコマンドを実行する
 	run("Select All");
 	run("Measure");
 	run("Close All");

@@ -1,9 +1,9 @@
-# simple example of vectors
+# ベクトルの簡単な例
 x <- c(3, 5, 1, 9, 0)
-# print the 3rd element
+# 三番目の要素を表示
 x[3]
-# now assign some random values instead
+# ここで元の値の代わりにいくつかのランダムな値を割り当てる
 x <- rnorm(10,10,2)
-# sum all except the first item
+# 一番目以外の全てを足し合わせる
 sum(x[-1])
-# run the last two commands again, note the change in value
+# 最後の二つのコマンドを再度実行し、値が変わったことに注目する

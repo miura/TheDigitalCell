@@ -1,4 +1,4 @@
-# ANOVA example
+# 分散分析(ANOVA)の実行
 data6 <- data.frame(
   gfp = c(294.9, 287.6, 195.2,
     290.3, 309.7, 201.2,
@@ -11,17 +11,17 @@ data6 <- data.frame(
     311.9, 312.2, 191.5,
     294.8, 284.8, 195.9),
   rnai = factor(rep(c("ctrl", "sirna1", "sirna2"), 10)))
-# have a look at the data frame
+# データフレームの中身を閲覧
 View(data6)
-# do ANOVA
+# 分散分析(ANOVA)の実行
 data6_av <- aov(gfp ~ rnai, data6)
 summary(data6_av)
-# do Tukey test
+# チューキー検定の実行
 data6_tukey <- TukeyHSD(data6_av)
-# look at results
+# 結果の参照
 data6_tukey
-# or plot out differences
+# もしくは違いをプロットしてみる
 plot(data6_tukey)
-# Dunnett's test. Use multcomp, install.packages if not installed
+# ダネットの検定。multicompパッケージを使うのでインストールされていなかったら install.packagesを利用する。
 library(multcomp)
 summary(glht(data6_av, linfct = mcp(rnai = "Dunnett")))

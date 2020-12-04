@@ -1,20 +1,20 @@
 /*
-* This macro will save a binarized version of each image in a new folder
+* このマクロは2値化したそれぞれの画像を新しいフォルダに保存する
 */
 dir1 = getDirectory("Select the source directory");
-// User must now also pick a destination folder
+// ここでユーザーは保存先のフォルダを指定する必要がある
 dir2 = getDirectory("Select destination directory");
 list = getFileList(dir1);
 Array.sort(list);
 setBatchMode(true);
 for(i=0; i<list.length; i++){
 	filename = dir1 + list[i];
-	// check we are dealing with a tiff file
+	// tiff 形式のファイルを扱っていることを確認する	
 	if (endsWith(filename, "tif")) {
 		open(filename);
-		// use a function to do the operations for each image
+		// それぞれの画像への処理に関数を用いる
 		processImage();
-		// now save the modified image in the destination folder
+		// ここで変更した画像を保存用のフォルダに保存する
 		saveAs("TIFF", dir2+list[i]);
 		close();
 		}
