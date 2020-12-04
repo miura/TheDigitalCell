@@ -1,34 +1,35 @@
 #!/usr/bin/env bash
 set -x
 trap read debug
-# this bash script will execute line-by-line
-# go to the Desktop
+# このbashスクリプトは一行ずつ実行する
+# デクストップへ移動
 cd ~/Desktop
 # make a directory
+# ディレクトリの作成
 mkdir my_folder
-# is it there?
+# 作ったものはあるか？
 ls -d */
-# go to my_folder
+# my_folderへ移動
 cd my_folder
-# to see what you are doing, display my_folder in Finder or equivalent
-# make two text files
+# 何をしているかを確認するために、my_folderをファインダーやそれと同等のもので表示
+# 二つのテキストファイルを作成
 echo "Is this the real life?" > a.txt
 echo "Is this just fantasy?" > b.txt
-# check that you have two files called a.txt and b.txt
+# a.txtとb.txtの二つのファイルが作成できたことを確認
 ls
-# join them together
+# それら二つを結合
 cat a.txt b.txt > c.txt
-# have a look at the file, and then use q to quit
+# 結合したファイルの中身をlsで見てから、qでlsを終了
 less c.txt
-# editing the file is possible using nano, use ctrl+x to quit
+# ファイルをnanoというエディタで編集することも可能で、その場合ctrl+xで終了
 nano c.txt
-# copy this file out of our folder to the desktop and change its name
+# 作ったファイルを現在いるディレクトリ外のデスクトップへコピーし、名前を変更
 cp c.txt ../d.txt
-# now move the file from the desktop into our folder
+# こんどはデスクトップ上のファイルを作成したフォルダへ移動
 mv ../d.txt d.txt
-# we can clean up by removing a file with rm
+# rmコマンドでファイルを削除することも可能
 rm a.txt
-# or we can remove all files and then delete our folder
+# また全てのファイルを削除し、フォルダを削除することも可能
 cd ~/Desktop
 rm my_folder/*
 rmdir my_folder/
