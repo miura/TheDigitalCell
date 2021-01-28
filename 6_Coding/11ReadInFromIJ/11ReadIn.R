@@ -8,6 +8,8 @@ my_col_names <- colnames(my_raw_data)
 mean_columns <- my_col_names[grepl("^Mean",my_col_names)]
 # 平均値列だけのデータフレームを作成する
 my_data <- subset(my_raw_data, select=mean_columns)
+# 行ごとの平均値を計算する
+my_means <- rowMeans(my_data, na.rm=TRUE)
 # それぞれのROIの値を眺める
 matplot(1:length(my_means), my_data,
         type = "l",
@@ -15,8 +17,6 @@ matplot(1:length(my_means), my_data,
         col = "grey",
         xlab = "Frames",
         ylab = "Mean Pixel Density")
-# 行ごとの平均値を計算する
-my_means <- rowMeans(my_data, na.rm=TRUE)
 # pdf ファイルを開く
 pdf("plot.pdf")
 # 結果を描画する

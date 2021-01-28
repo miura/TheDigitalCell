@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -x
+# このbashスクリプトを一行ずつ実行する
 trap read debug
-# このbashスクリプトは一行ずつ実行する
+
 # デクストップへ移動
 cd ~/Desktop
-# make a directory
 # ディレクトリの作成
 mkdir my_folder
 # 作ったものはあるか？
