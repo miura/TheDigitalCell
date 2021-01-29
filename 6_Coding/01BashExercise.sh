@@ -19,7 +19,7 @@ echo "Is this just fantasy?" > b.txt
 ls
 # それら二つを結合
 cat a.txt b.txt > c.txt
-# 結合したファイルの中身をlsで見てから、qでlsを終了
+# 結合したファイルの中身をlsで見てから、qで中身の表示を終了
 less c.txt
 # ファイルをnanoというエディタで編集することも可能で、その場合ctrl+xで終了
 nano c.txt
