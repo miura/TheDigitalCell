@@ -16,7 +16,7 @@ macro "Blind Analysis" {
 			imNames = append(imNames, allNames[i]);
 		}
 	}
-	imNum = imNames.length
+	imNum = imNames.length;
 	// imNumの長さと同じ、並べ替えた配列を生成
 	imPerm = newArray(imNum);
 	for(i = 0; i < imNum; i ++) {
