@@ -22,3 +22,12 @@
 [![DOI](https://zenodo.org/badge/180952157.svg)](https://zenodo.org/badge/latestdoi/180952157)
 
 
+
+## 出版後の訂正
+
+
+
+訂正箇所がいくつかあります。以下の文書を御覧ください。
+
+[訳文の訂正](corrections.md)
+
